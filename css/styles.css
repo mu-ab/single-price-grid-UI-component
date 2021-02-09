@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Karla', sans-serif;
+    margin: 0;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.container {
+    width: 45vw;
+    max-width: 45vw;
+    min-width: 274px;
+    display: grid;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+}
+.header,
+.monthly-sub,
+.why-us {
+    padding: 15px 30px;
+}
+
+
+.header {
+    grid-column: 1/5;
+    background-color: white;
+}
+
+.header h2 {
+    color: var(--cyan);
+}
+
+.header h3 {
+    color: var(--bright-yellow);
+    margin-bottom: 0;
+}
+
+.header p {
+    color: var(--grayish-blue);
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+.header h2,
+.header h3 {
+    font-weight: normal;
+}
+
+.monthly-sub {
+    background-color: var(--cyan);
+    grid-column: 1 / 3;
+}
+
+.monthly-sub,
+.why-us {
+    font-size: 0.9em;
+}
+
+.monthly-sub button {
+    width: 90%;
+    border: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    color: var(--light-gray);
+    background-color: var(--bright-yellow);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    margin-top: 22px;
+    font-weight: 400;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+}
+
+.monthly-sub span {
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-right: 7px;
+}
+
+.monthly-sub small {
+    color: hsl(204, 43%, 80%);
+}
+
+.monthly-sub,
+.why-us {
+    color: var(--light-gray);
+}
+
+.why-us {
+    background-color: hsl(180, 40%, 57%);
+    grid-column: 3 / 5;
+}
+
+.why-us ul {
+    font-family: "Karla", sans-serif;
+    list-style: none;
+    line-height: 1.7;
+    font-size: 0.85em;
+    font-weight: normal;
+    color: hsl(204, 43%, 87%);
+    padding-left: 0;
+}
+
+.attribution {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+
+  /* ==========================
+        Mobile Responsiveness
+    ==========================*/
+
+    @media only screen and (max-width: 768px) {
+
+        body,
+        html {
+            margin-top: 10px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            font-size: 0.85em;
+        }
+
+        .header h2 {
+            margin-top: 0;
+        }
+
+        .monthly-sub h3 {
+            margin-top: 0;
+        }
+
+        .monthly-sub  p {
+            margin-bottom: 0;
+        }
+
+        .monthly-sub button {
+            margin-top: 15px;
+        }
+    
+        .why-us h3 {
+            margin-top: 0;
+        }
+
+    }
